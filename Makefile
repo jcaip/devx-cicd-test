@@ -1,10 +1,10 @@
 all: clean build run
 
 clean:
-	- docker stop flask-dockerized
+	- docker stop flask_dockerized
 
 build:
-	docker build -t flask-dockerized:latest . 
+	docker build -t flask_dockerized:latest . 
 
 run:
-	docker run -d -p 80:5000 flask-dockerized
+	docker run -d -p 80:5000 flask_dockerized
