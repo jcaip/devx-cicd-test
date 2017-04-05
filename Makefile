@@ -1,10 +1,12 @@
+NAME=flask_dockerized
+
 all: clean build run
 
 clean:
-	- docker stop flask_dockerized
+	- docker stop $(docker ps -q --filter ancestor=$(NAME) )
 
 build:
-	docker build -t flask_dockerized:latest . 
+	docker build -t $(NAME):latest . 
 
 run:
-	docker run -d -p 80:5000 flask_dockerized
+	docker run -d -p 80:5000 $(NAME) 
