@@ -8,7 +8,7 @@ def test():
 
 @app.route('/two')
 def test_two():
-    return "Working!"
+    return "Working, but with more text!"
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
