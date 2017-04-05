@@ -1,5 +1,5 @@
 
-all: build run
+all: clean build run
 
 clean:
 	docker stop $(docker ps -q --filter ancestor=flask_dockerized )
