@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def test():
-    return "ACM DevXXXXX!"
+    return "ACM AI!"
 
 @app.route('/two')
 def test_two():
