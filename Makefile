@@ -1,8 +1,9 @@
+ID=$(docker ps -q --filter ancestor=flask_dockerized)
 
 all: clean build run
 
 clean:
-	- docker stop $(docker ps -q --filter ancestor=flask_dockerized)
+	- docker stop $(ID)
 
 build:
 	docker build -t flask_dockerized:latest . 
