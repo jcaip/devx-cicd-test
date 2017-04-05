@@ -1,4 +1,7 @@
-all: build run
+all: clean build run
+
+clean:
+	- docker stop flask-dockerized
 
 build:
 	docker build -t flask-dockerized:latest . 
